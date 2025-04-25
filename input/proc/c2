@@ -1,0 +1,28 @@
+2 27
+alloc 100 0
+write 111 0 0
+read 0 0 2
+write 111 0 1
+read 0 1 2
+write 111 0 2
+read 0 2 2
+write 111 0 3
+read 0 3 2
+write 111 0 4
+read 0 4 2
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc
+calc

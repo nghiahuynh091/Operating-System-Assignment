@@ -1,0 +1,129 @@
+Time slot   0
+ld_routine
+	Loaded a process at input/proc/an2s, PID: 1 PRIO: 1
+Time slot   1
+	CPU 0: Dispatched process  1
+allocated_frames: 2
+req_pgnum: 2
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=1 - Region=1 - Address=00000000 - Size=300 byte
+print_pgtbl: 0 - 512
+00000000: 80000000
+00000004: 80000001
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+================================================================
+Time slot   2
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=1 - Region=1
+print_pgtbl: 0 - 512
+00000000: 80000000
+00000004: 80000001
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+===================LIST OF FREE REGION===================
+print_list_rg: 
+rg[0->300]
+
+================================================================
+Time slot   3
+allocated_frames: 2
+req_pgnum: 2
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=1 - Region=0 - Address=0000012c - Size=600 byte
+print_pgtbl: 0 - 1024
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+Page Number: 2 -> Frame Number: 2
+Page Number: 3 -> Frame Number: 3
+================================================================
+Time slot   4
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+allocated_frames: 2
+req_pgnum: 2
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=1 - Region=1 - Address=00000384 - Size=512 byte
+print_pgtbl: 0 - 1536
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+00000016: 80000004
+00000020: 80000005
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+Page Number: 2 -> Frame Number: 2
+Page Number: 3 -> Frame Number: 3
+Page Number: 4 -> Frame Number: 4
+Page Number: 5 -> Frame Number: 5
+================================================================
+Time slot   5
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=1 - Region=1
+print_pgtbl: 0 - 1536
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+00000016: 80000004
+00000020: 80000005
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+Page Number: 2 -> Frame Number: 2
+Page Number: 3 -> Frame Number: 3
+Page Number: 4 -> Frame Number: 4
+Page Number: 5 -> Frame Number: 5
+===================LIST OF FREE REGION===================
+print_list_rg: 
+rg[0->300]
+rg[900->1412]
+
+================================================================
+Time slot   6
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=1 - Region=0
+print_pgtbl: 0 - 1536
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+00000016: 80000004
+00000020: 80000005
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+Page Number: 2 -> Frame Number: 2
+Page Number: 3 -> Frame Number: 3
+Page Number: 4 -> Frame Number: 4
+Page Number: 5 -> Frame Number: 5
+===================LIST OF FREE REGION===================
+print_list_rg: 
+rg[0->1412]
+
+================================================================
+Time slot   7
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=1 - Region=1 - Address=00000000 - Size=1280 byte
+print_pgtbl: 0 - 1536
+00000000: 80000000
+00000004: 80000001
+00000008: 80000002
+00000012: 80000003
+00000016: 80000004
+00000020: 80000005
+Page Number: 0 -> Frame Number: 0
+Page Number: 1 -> Frame Number: 1
+Page Number: 2 -> Frame Number: 2
+Page Number: 3 -> Frame Number: 3
+Page Number: 4 -> Frame Number: 4
+Page Number: 5 -> Frame Number: 5
+================================================================
+Time slot   8
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped

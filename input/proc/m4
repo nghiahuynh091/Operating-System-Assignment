@@ -1,0 +1,21 @@
+5 19
+alloc 10 0
+alloc 10 1
+alloc 10 5
+free 0
+alloc 10 6
+alloc 10 7
+alloc 10 8
+alloc 10 9
+alloc 10 10
+write 20 10 0
+read 0 0 2
+free 1
+alloc 15 3
+write 25 15 3
+read 3 5 1
+alloc 20 4
+free 5
+write 30 20 4
+read 4 10 2
+

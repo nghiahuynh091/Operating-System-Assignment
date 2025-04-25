@@ -1,0 +1,14 @@
+2 10
+alloc 200 0
+write 109 0 0
+write 51 0 1
+write -1 0 2
+syscall 101 0
+alloc 200 1
+write 109 1
+write 52 1 1
+write -1 1 2
+syscall 101 1
+
+
+

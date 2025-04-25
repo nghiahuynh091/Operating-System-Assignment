@@ -1,0 +1,7 @@
+16 6
+alloc 1024 0
+alloc 1280 1
+alloc 1024 2
+free 0
+free 1
+free 2

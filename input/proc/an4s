@@ -1,0 +1,10 @@
+7 9
+alloc 300 1
+alloc 212 0
+alloc 100 2
+alloc 156 3
+free 1
+free 2
+free 0
+alloc 513 0
+alloc 99 1

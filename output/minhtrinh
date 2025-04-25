@@ -1,0 +1,271 @@
+minh_trinh@minhtrinh:~/OS/LargeAssignment/ossim_sierra$ ./os os_1_singleCPU_mlq_paging
+******************************TIME SLOT   0******************************
+ld_routine
+******************************TIME SLOT   1******************************
+	Loaded a process at input/proc/s4, PID: 1 PRIO: 4
+******************************TIME SLOT   2******************************
+	CPU 0: Dispatched process  1
+	Loaded a process at input/proc/s3, PID: 2 PRIO: 3
+******************************TIME SLOT   3******************************
+******************************TIME SLOT   4******************************
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+	Loaded a process at input/proc/m1s, PID: 3 PRIO: 2
+******************************TIME SLOT   5******************************
+******************************TIME SLOT   6******************************
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  3
+	Loaded a process at input/proc/s2, PID: 4 PRIO: 3
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=3 - Region=0 - Address=00000000 - Size=300 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+******************************TIME SLOT   7******************************
+	Loaded a process at input/proc/m0s, PID: 5 PRIO: 3
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=3 - Region=1 - Address=00000300 - Size=100 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+******************************TIME SLOT   8******************************
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  3
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=3 - Region=0
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+******************************TIME SLOT   9******************************
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=3 - Region=2 - Address=00000000 - Size=100 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+	Loaded a process at input/proc/p1s, PID: 6 PRIO: 2
+******************************TIME SLOT  10******************************
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  6
+******************************TIME SLOT  11******************************
+	Loaded a process at input/proc/s0, PID: 7 PRIO: 1
+******************************TIME SLOT  12******************************
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  13******************************
+******************************TIME SLOT  14******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  15******************************
+******************************TIME SLOT  16******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+	Loaded a process at input/proc/s1, PID: 8 PRIO: 0
+******************************TIME SLOT  17******************************
+******************************TIME SLOT  18******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  8
+******************************TIME SLOT  19******************************
+******************************TIME SLOT  20******************************
+	CPU 0: Put process  8 to run queue
+	CPU 0: Dispatched process  8
+******************************TIME SLOT  21******************************
+******************************TIME SLOT  22******************************
+	CPU 0: Put process  8 to run queue
+	CPU 0: Dispatched process  8
+******************************TIME SLOT  23******************************
+******************************TIME SLOT  24******************************
+	CPU 0: Put process  8 to run queue
+	CPU 0: Dispatched process  8
+******************************TIME SLOT  25******************************
+	CPU 0: Processed  8 has finished
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  26******************************
+******************************TIME SLOT  27******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  28******************************
+******************************TIME SLOT  29******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  30******************************
+******************************TIME SLOT  31******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  32******************************
+******************************TIME SLOT  33******************************
+	CPU 0: Put process  7 to run queue
+	CPU 0: Dispatched process  7
+******************************TIME SLOT  34******************************
+	CPU 0: Processed  7 has finished
+	CPU 0: Dispatched process  3
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=3 - Region=2
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+******************************TIME SLOT  35******************************
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=3 - Region=1
+print_pgtbl: 0 - 512
+00000000: 80000001
+00000004: 80000002
+Page Number: 0 -> Frame Number: 1
+Page Number: 1 -> Frame Number: 2
+================================================================
+******************************TIME SLOT  36******************************
+	CPU 0: Processed  3 has finished
+	CPU 0: Dispatched process  6
+******************************TIME SLOT  37******************************
+******************************TIME SLOT  38******************************
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  6
+******************************TIME SLOT  39******************************
+******************************TIME SLOT  40******************************
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  6
+******************************TIME SLOT  41******************************
+******************************TIME SLOT  42******************************
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  6
+******************************TIME SLOT  43******************************
+******************************TIME SLOT  44******************************
+	CPU 0: Processed  6 has finished
+	CPU 0: Dispatched process  2
+******************************TIME SLOT  45******************************
+******************************TIME SLOT  46******************************
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  47******************************
+******************************TIME SLOT  48******************************
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  5
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=5 - Region=0 - Address=00000000 - Size=300 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+******************************TIME SLOT  49******************************
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=5 - Region=1 - Address=00000300 - Size=100 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+******************************TIME SLOT  50******************************
+	CPU 0: Put process  5 to run queue
+	CPU 0: Dispatched process  2
+******************************TIME SLOT  51******************************
+******************************TIME SLOT  52******************************
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  53******************************
+******************************TIME SLOT  54******************************
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  5
+===== PHYSICAL MEMORY AFTER DEALLOCATION =====
+PID=5 - Region=0
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+******************************TIME SLOT  55******************************
+===== PHYSICAL MEMORY AFTER ALLOCATION =====
+PID=5 - ư - Size=100 byte(s)
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+******************************TIME SLOT  56******************************
+	CPU 0: Put process  5 to run queue
+	CPU 0: Dispatched process  2
+******************************TIME SLOT  57******************************
+******************************TIME SLOT  58******************************
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  59******************************
+******************************TIME SLOT  60******************************
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  5
+===== PHYSICAL MEMORY AFTER WRITING =====
+write region=1 offset=20 value=102
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+===== PHYSICAL MEMORY DUMP =====
+BYTE 00001088: 102
+===== PHYSICAL MEMORY END-DUMP =====
+================================================================
+******************************TIME SLOT  61******************************
+===== PHYSICAL MEMORY AFTER WRITING =====
+write region=2 offset=1000 value=1
+print_pgtbl: 0 - 512
+00000000: 80000003
+00000004: 80000004
+Page Number: 0 -> Frame Number: 3
+Page Number: 1 -> Frame Number: 4
+================================================================
+===== PHYSICAL MEMORY DUMP =====
+BYTE 00000232: 1
+BYTE 00001088: 102
+===== PHYSICAL MEMORY END-DUMP =====
+================================================================
+******************************TIME SLOT  62******************************
+	CPU 0: Processed  5 has finished
+	CPU 0: Dispatched process  2
+******************************TIME SLOT  63******************************
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  64******************************
+******************************TIME SLOT  65******************************
+******************************TIME SLOT  66******************************
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  2
+******************************TIME SLOT  67******************************
+	CPU 0: Processed  2 has finished
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  68******************************
+******************************TIME SLOT  69******************************
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  4
+******************************TIME SLOT  70******************************
+******************************TIME SLOT  71******************************
+	CPU 0: Processed  4 has finished
+	CPU 0: Dispatched process  1
+******************************TIME SLOT  72******************************
+******************************TIME SLOT  73******************************
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+******************************TIME SLOT  74******************************
+******************************TIME SLOT  75******************************
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+******************************TIME SLOT  76******************************
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped

@@ -1,0 +1,9 @@
+5 8
+alloc 100 0
+write 99 0 0
+write 50 0 1
+write -1 0 2
+syscall 101 0
+write 100 0 3
+read 0 2 2
+write 100 0 4
