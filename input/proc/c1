@@ -1,12 +1,16 @@
-5 11
+5 15
 alloc 256 0
 write 99 0 0
 write 50 0 1
 write -1 0 2
+alloc 20 1
 syscall 101 0
 calc
 calc
 calc
-alloc 256 2
-alloc 256 3
+alloc 80 2
+alloc 412 3
+write 33 3 0
+write 44 3 412
+read 3 0 9
 write 77 2 0

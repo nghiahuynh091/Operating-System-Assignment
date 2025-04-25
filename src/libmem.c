@@ -565,18 +565,29 @@ int free_pcb_memph(struct pcb_t *caller)
 
   for (pagenum = 0; pagenum < PAGING_MAX_PGN; pagenum++)
   {
+
     pte = caller->mm->pgd[pagenum];
 
-    if (!PAGING_PAGE_PRESENT(pte))
-    {
-      fpn = PAGING_PTE_FPN(pte);
-      MEMPHY_put_freefp(caller->mram, fpn);
-    }
-    else
-    {
-      fpn = PAGING_PTE_SWP(pte);
-      MEMPHY_put_freefp(caller->active_mswp, fpn);
-    }
+    // if (!PAGING_PAGE_PRESENT(pte))
+    // {
+    //   fpn = PAGING_PTE_FPN(pte);
+    //   MEMPHY_put_freefp(caller->mram, fpn);
+    // }
+    // else
+    // {
+    //   fpn = PAGING_PTE_SWP(pte);
+      // MEMPHY_put_freefp(caller->active_mswp, fpn);
+    // }
+  if (PAGING_PAGE_PRESENT(pte))  // If page is present
+  {
+    fpn = PAGING_PTE_FPN(pte);
+    MEMPHY_put_freefp(caller->mram, fpn);
+  }
+  else if (PAGING_PTE_SWP(pte))  // If page is swapped
+  {
+    fpn = PAGING_PTE_SWP(pte);
+    MEMPHY_put_freefp(caller->active_mswp, fpn);
+  }
   }
 
   return 0;
