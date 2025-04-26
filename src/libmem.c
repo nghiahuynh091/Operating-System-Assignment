@@ -358,6 +358,8 @@ int pg_getpage(struct mm_struct *mm, int pgn, int *fpn, struct pcb_t *caller)
   { /* Page is not online, make it actively living */
     printf("Page %d is not present\n", pgn);
     printf("!!!!!!!!!!======== PAGE FAULT ========!!!!!!!!!!\n");
+    // Set the state to terminated
+    caller->state = TERMINATED;
     return -1; //! Return as no page replacement is needed
   }
 
@@ -471,9 +473,11 @@ int libread(
     uint32_t *destination)
 {
   BYTE data;
+  int index = *destination; 
   int val = __read(proc, 0, source, offset, &data);
 /* TODO update result of reading action*/
 // destination
+  proc->regs[index] = data; //! Update data read to regs[]
 #ifdef IODUMP
   if (val == 0)
   {
@@ -495,8 +499,9 @@ int libread(
     pthread_mutex_unlock(&mmvm_lock);
   }
 #endif
-
+  
   *destination = data; // Update the destination with the read value
+
   return val;
 }
 

@@ -20,6 +20,7 @@ Page Number: 3 -> Frame Number: 3
 Time slot   2
 OOM: vm_map_ram out of memory 
 Error: Unable to map memory
+!!!!! Error: inc_vma_limit failed !!!!!
 Time slot   3
 allocated_frames: 4
 req_pgnum: 4
