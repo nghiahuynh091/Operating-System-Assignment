@@ -1,0 +1,16 @@
+1 15
+alloc 300 0
+calc
+free 0
+alloc 300 1
+calc
+free 1
+alloc 300 2
+calc
+calc
+read 1 20 20
+write 102 2 20
+read 2 20 20
+write 103 3 20
+read 3 20 20
+calc

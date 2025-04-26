@@ -71,30 +71,7 @@ void free_pcb(struct pcb_t *proc)
     // Finally free the PCB
     free(proc);
 }
-static void recollect_resources(struct pcb_t* proc) {
-    free_pcb_memph(proc);
 
-    if (proc->code) 
-        free(proc->code);
-
-#ifdef MM_PAGING
-    free(proc->mm->pgd);
-
-    struct vm_rg_struct* traverse = proc->mm->mmap->vm_freerg_list;
-    struct vm_rg_struct* prev = NULL;
-
-    while (traverse) {
-        prev = traverse;
-        traverse = traverse->rg_next;
-        free(prev);
-    }
-
-    free(proc->mm);
-#endif
-
-    free(proc);
-    proc = NULL;
-}
 int __sys_killall(struct pcb_t *caller, struct sc_regs *regs)
 {
     char proc_name[100];
@@ -201,6 +178,6 @@ int __sys_killall(struct pcb_t *caller, struct sc_regs *regs)
     // }
     // pthread_mutex_unlock(&queue_lock);
 
-    printf(">>>>>> Total processes terminated: %d <<<<<<<\n", terminated_count);
+    printf(">>>>>> Total sended signal TERMINATED: %d <<<<<<\n", terminated_count);
     return 0;
 }
