@@ -1,6 +1,6 @@
 5 15
 alloc 256 0
-write 99 0 0
+write 99 0 1000
 write 50 0 1
 write -1 0 2
 alloc 20 1

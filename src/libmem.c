@@ -224,8 +224,8 @@ int __alloc(struct pcb_t *caller, int vmaid, int rgid, int size, int *alloc_addr
   regs->a3 = inc_sz;
   uint32_t nghiasys = 17;
   /* SYSCALL 17 sys_memmap */
-  int checking = inc_vma_limit(caller, vmaid, inc_sz);
-  //  = syscall(caller, nghiasys, regs);
+  // int checking = inc_vma_limit(caller, vmaid, inc_sz);
+  int checking = syscall(caller, nghiasys, regs);
   // printf("checking alloc:%d", checking);
   if (checking < 0)
   {
