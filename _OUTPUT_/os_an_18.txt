@@ -2,55 +2,55 @@ Time slot   0
 ld_routine
 	Loaded a process at input/proc/an1c, PID: 1 PRIO: 1
 Time slot   1
-	CPU 2: Dispatched process  1
+	CPU 0: Dispatched process  1
 	Loaded a process at input/proc/an1c, PID: 2 PRIO: 2
 Time slot   2
-	CPU 2: Processed  1 has finished
-	CPU 1: Dispatched process  2
+	CPU 2: Dispatched process  2
+	CPU 0: Processed  1 has finished
 	Loaded a process at input/proc/an1c, PID: 3 PRIO: 1
 Time slot   3
-	CPU 1: Processed  2 has finished
-	CPU 2: Dispatched process  3
+	CPU 0: Dispatched process  3
+	CPU 2: Processed  2 has finished
 	Loaded a process at input/proc/an1c, PID: 4 PRIO: 2
 Time slot   4
-	CPU 2: Processed  3 has finished
-	CPU 1: Dispatched process  4
+	CPU 0: Processed  3 has finished
+	CPU 2: Dispatched process  4
 	Loaded a process at input/proc/an1c, PID: 5 PRIO: 1
 Time slot   5
-	CPU 2: Dispatched process  5
-	CPU 1: Processed  4 has finished
+	CPU 0: Dispatched process  5
+	CPU 2: Processed  4 has finished
 	Loaded a process at input/proc/an1c, PID: 6 PRIO: 2
 Time slot   6
-	CPU 2: Processed  5 has finished
-	CPU 0: Dispatched process  6
+	CPU 0: Processed  5 has finished
+	CPU 2: Dispatched process  6
 	Loaded a process at input/proc/an1c, PID: 7 PRIO: 1
 Time slot   7
-	CPU 2: Dispatched process  7
-	CPU 0: Processed  6 has finished
+	CPU 2: Processed  6 has finished
+	CPU 1: Dispatched process  7
 	Loaded a process at input/proc/an1c, PID: 8 PRIO: 2
 Time slot   8
-	CPU 1: Dispatched process  8
-	CPU 2: Processed  7 has finished
+	CPU 1: Processed  7 has finished
+	CPU 0: Dispatched process  8
 	Loaded a process at input/proc/an1c, PID: 9 PRIO: 1
 Time slot   9
-	CPU 2: Dispatched process  9
-	CPU 1: Processed  8 has finished
+	CPU 1: Dispatched process  9
+	CPU 0: Processed  8 has finished
 	Loaded a process at input/proc/an1c, PID: 10 PRIO: 2
 Time slot  10
-	CPU 2: Processed  9 has finished
 	CPU 2: Dispatched process 10
+	CPU 1: Processed  9 has finished
 	Loaded a process at input/proc/an1c, PID: 11 PRIO: 1
 Time slot  11
 	CPU 2: Processed 10 has finished
-	CPU 1: Dispatched process 11
+	CPU 2: Dispatched process 11
 	Loaded a process at input/proc/an1c, PID: 12 PRIO: 2
 Time slot  12
-	CPU 2: Dispatched process 12
-	CPU 1: Processed 11 has finished
+	CPU 1: Dispatched process 12
+	CPU 2: Processed 11 has finished
 	Loaded a process at input/proc/s1, PID: 13 PRIO: 3
 Time slot  13
-	CPU 2: Processed 12 has finished
 	CPU 2: Dispatched process 13
+	CPU 1: Processed 12 has finished
 	Loaded a process at input/proc/s1, PID: 14 PRIO: 5
 Time slot  14
 	CPU 1: Dispatched process 14
@@ -62,35 +62,32 @@ req_pgnum: 1
 ===== PHYSICAL MEMORY AFTER ALLOCATION =====
 PID=15 - Region=1 - Address=00000000 - Size=100 byte
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 ================================================================
 	Loaded a process at input/proc/s0, PID: 16 PRIO: 1
 Time slot  16
+	CPU 2: Put process 13 to run queue
+	CPU 2: Dispatched process 16
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=0 value=115
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
-	CPU 2: Put process 13 to run queue
-	CPU 2: Dispatched process 16
 Time slot  17
 	CPU 1: Put process 14 to run queue
 	CPU 1: Dispatched process 13
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=1 value=49
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
 Time slot  18
@@ -99,13 +96,10 @@ Time slot  18
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=2 value=-1
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
 Time slot  19
@@ -114,119 +108,340 @@ Time slot  19
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=0 value=115
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=1 value=49
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=2 value=-1
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 The procname retrieved from memregionid 1 is "s1"
 Found match in running_list: s1 (PID: 13)
 Found match in running_list: s1 (PID: 14)
->>>>>> Total processes terminated: 2 <<<<<<<
+>>>>>> Total sended signal TERMINATED: 2 <<<<<<
 Time slot  20
+	CPU 1: Process 13 received TERMINATED signal 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=0 value=115
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
+	CPU 1: Dispatched process 14
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=1 value=49
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=2 value=-1
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 LIST OF FREE REGION: print_list_rg: 
 rg[0->0]
 
 ================================================================
 ===== PHYSICAL MEMORY DUMP =====
-BYTE 00000000: 115
-BYTE 00000001: 49
-BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 The procname retrieved from memregionid 1 is "s1"
-Found match in running_list: s1 (PID: 13)
 Found match in running_list: s1 (PID: 14)
->>>>>> Total processes terminated: 2 <<<<<<<
-	CPU 1: Terminated process 13
-	CPU 1: Dispatched process 14
+>>>>>> Total sended signal TERMINATED: 1 <<<<<<
 Time slot  21
-	CPU 1: Terminated process 14
-	CPU 1 stopped
+	CPU 1: Process 14 received TERMINATED signal 
 	CPU 0: Put process 15 to run queue
 	CPU 0: Dispatched process 15
 ===== PHYSICAL MEMORY AFTER DEALLOCATION =====
 PID=15 - Region=1
 print_pgtbl: 0 - 256
-00000000: 80000000
-Page Number: 0 -> Frame Number: 0
+00000000: 80000130
+Page Number: 0 -> Frame Number: 304
 ===================LIST OF FREE REGION===================
 print_list_rg: 
 rg[0->100]
 
 ================================================================
+	CPU 1 stopped
 Time slot  22
 	CPU 2: Put process 16 to run queue
 	CPU 2: Dispatched process 16

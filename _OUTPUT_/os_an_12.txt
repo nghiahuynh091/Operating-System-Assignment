@@ -73,6 +73,46 @@ BYTE 00000001: 49
 BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=3 read region=1 offset=1 value=49
 print_pgtbl: 0 - 256
@@ -88,6 +128,46 @@ BYTE 00000001: 49
 BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=3 read region=1 offset=2 value=-1
 print_pgtbl: 0 - 256
@@ -103,9 +183,49 @@ BYTE 00000001: 49
 BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+DEBUG: List of regs 
+ Regs[0] is 115 
+ Regs[1] is 0 
+ Regs[2] is 0 
+ Regs[3] is 0 
+ Regs[4] is 0 
+ Regs[5] is 0 
+ Regs[6] is 0 
+ Regs[7] is 0 
+ Regs[8] is 0 
+DEBUG: List of symrgtbl: 
+symrgtbl[0] end is: 0 
+symrgtbl[1] end is: 100 
+symrgtbl[2] end is: 0 
+symrgtbl[3] end is: 0 
+symrgtbl[4] end is: 0 
+symrgtbl[5] end is: 0 
+symrgtbl[6] end is: 0 
+symrgtbl[7] end is: 0 
+symrgtbl[8] end is: 0 
+symrgtbl[9] end is: 0 
+symrgtbl[10] end is: 0 
+symrgtbl[11] end is: 0 
+symrgtbl[12] end is: 0 
+symrgtbl[13] end is: 0 
+symrgtbl[14] end is: 0 
+symrgtbl[15] end is: 0 
+symrgtbl[16] end is: 0 
+symrgtbl[17] end is: 0 
+symrgtbl[18] end is: 0 
+symrgtbl[19] end is: 0 
+symrgtbl[20] end is: 0 
+symrgtbl[21] end is: 0 
+symrgtbl[22] end is: 0 
+symrgtbl[23] end is: 0 
+symrgtbl[24] end is: 0 
+symrgtbl[25] end is: 0 
+symrgtbl[26] end is: 0 
+symrgtbl[27] end is: 0 
+symrgtbl[28] end is: 0 
 The procname retrieved from memregionid 1 is "s1"
 Found match in running_list: s1 (PID: 1)
->>>>>> Total processes terminated: 1 <<<<<<<
+>>>>>> Total sended signal TERMINATED: 1 <<<<<<
 Time slot  10
 ===== PHYSICAL MEMORY AFTER DEALLOCATION =====
 PID=3 - Region=1
@@ -127,7 +247,7 @@ Time slot  15
 	CPU 0: Put process  2 to run queue
 	CPU 0: Dispatched process  1
 Time slot  16
-	CPU 0: Terminated process  1
+	CPU 0: Process 1 received TERMINATED signal 
 	CPU 0: Dispatched process  2
 Time slot  17
 Time slot  18

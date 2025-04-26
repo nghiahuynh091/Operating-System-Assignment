@@ -82,7 +82,7 @@ struct pcb_t
 	uint32_t priority;	 // Default priority, this legacy process based (FIXED)
 	char path[100];
 	struct code_seg_t *code; // Code segment
-	addr_t regs[10];	 // Registers, store address of allocated regions
+	addr_t regs[PAGING_MAX_SYMTBL_SZ];	 // Registers, store address of allocated regions //! Adjust to match with symrgtbl
 	uint32_t pc;		 // Program pointer, point to the next instruction
 	struct queue_t *ready_queue;
 	struct queue_t *running_list;
