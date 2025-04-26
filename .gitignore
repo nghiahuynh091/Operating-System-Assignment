@@ -1,5 +1,5 @@
 # Ignore the OUTPUT folder and all its contents
-OUTPUT/
+_OUTPUT_/
 
 # Common C build artifacts
 *.o
