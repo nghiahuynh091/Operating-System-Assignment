@@ -6,15 +6,15 @@ Time slot   1
 	Loaded a process at input/proc/an1c, PID: 2 PRIO: 2
 Time slot   2
 	CPU 2: Processed  1 has finished
-	CPU 0: Dispatched process  2
+	CPU 1: Dispatched process  2
 	Loaded a process at input/proc/an1c, PID: 3 PRIO: 1
 Time slot   3
+	CPU 1: Processed  2 has finished
 	CPU 2: Dispatched process  3
-	CPU 0: Processed  2 has finished
 	Loaded a process at input/proc/an1c, PID: 4 PRIO: 2
 Time slot   4
-	CPU 1: Dispatched process  4
 	CPU 2: Processed  3 has finished
+	CPU 1: Dispatched process  4
 	Loaded a process at input/proc/an1c, PID: 5 PRIO: 1
 Time slot   5
 	CPU 2: Dispatched process  5
@@ -22,15 +22,15 @@ Time slot   5
 	Loaded a process at input/proc/an1c, PID: 6 PRIO: 2
 Time slot   6
 	CPU 2: Processed  5 has finished
-	CPU 1: Dispatched process  6
+	CPU 0: Dispatched process  6
 	Loaded a process at input/proc/an1c, PID: 7 PRIO: 1
 Time slot   7
 	CPU 2: Dispatched process  7
-	CPU 1: Processed  6 has finished
+	CPU 0: Processed  6 has finished
 	Loaded a process at input/proc/an1c, PID: 8 PRIO: 2
 Time slot   8
-	CPU 2: Processed  7 has finished
 	CPU 1: Dispatched process  8
+	CPU 2: Processed  7 has finished
 	Loaded a process at input/proc/an1c, PID: 9 PRIO: 1
 Time slot   9
 	CPU 2: Dispatched process  9
@@ -38,25 +38,25 @@ Time slot   9
 	Loaded a process at input/proc/an1c, PID: 10 PRIO: 2
 Time slot  10
 	CPU 2: Processed  9 has finished
-	CPU 1: Dispatched process 10
+	CPU 2: Dispatched process 10
 	Loaded a process at input/proc/an1c, PID: 11 PRIO: 1
 Time slot  11
-	CPU 2: Dispatched process 11
-	CPU 1: Processed 10 has finished
+	CPU 2: Processed 10 has finished
+	CPU 1: Dispatched process 11
 	Loaded a process at input/proc/an1c, PID: 12 PRIO: 2
 Time slot  12
-	CPU 2: Processed 11 has finished
-	CPU 1: Dispatched process 12
+	CPU 2: Dispatched process 12
+	CPU 1: Processed 11 has finished
 	Loaded a process at input/proc/s1, PID: 13 PRIO: 3
 Time slot  13
-	CPU 1: Processed 12 has finished
+	CPU 2: Processed 12 has finished
 	CPU 2: Dispatched process 13
 	Loaded a process at input/proc/s1, PID: 14 PRIO: 5
 Time slot  14
-	CPU 0: Dispatched process 14
+	CPU 1: Dispatched process 14
 	Loaded a process at input/proc/an1b, PID: 15 PRIO: 1
 Time slot  15
-	CPU 1: Dispatched process 15
+	CPU 0: Dispatched process 15
 allocated_frames: 1
 req_pgnum: 1
 ===== PHYSICAL MEMORY AFTER ALLOCATION =====
@@ -67,8 +67,6 @@ Page Number: 0 -> Frame Number: 0
 ================================================================
 	Loaded a process at input/proc/s0, PID: 16 PRIO: 1
 Time slot  16
-	CPU 2: Put process 13 to run queue
-	CPU 2: Dispatched process 16
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=0 value=115
 print_pgtbl: 0 - 256
@@ -79,7 +77,11 @@ Page Number: 0 -> Frame Number: 0
 BYTE 00000000: 115
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
+	CPU 2: Put process 13 to run queue
+	CPU 2: Dispatched process 16
 Time slot  17
+	CPU 1: Put process 14 to run queue
+	CPU 1: Dispatched process 13
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=1 value=49
 print_pgtbl: 0 - 256
@@ -91,11 +93,9 @@ BYTE 00000000: 115
 BYTE 00000001: 49
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
-	CPU 0: Put process 14 to run queue
-	CPU 0: Dispatched process 13
 Time slot  18
-	CPU 1: Put process 15 to run queue
-	CPU 1: Dispatched process 15
+	CPU 0: Put process 15 to run queue
+	CPU 0: Dispatched process 15
 ===== PHYSICAL MEMORY AFTER WRITING =====
 PID=15 write region=1 offset=2 value=-1
 print_pgtbl: 0 - 256
@@ -161,7 +161,6 @@ Found match in running_list: s1 (PID: 13)
 Found match in running_list: s1 (PID: 14)
 >>>>>> Total processes terminated: 2 <<<<<<<
 Time slot  20
-	CPU 0: Terminated process 13
 ===== PHYSICAL MEMORY AFTER READING =====
 PID=15 read region=1 offset=0 value=115
 print_pgtbl: 0 - 256
@@ -208,12 +207,16 @@ BYTE 00000002: -1
 ===== PHYSICAL MEMORY END-DUMP =====
 ================================================================
 The procname retrieved from memregionid 1 is "s1"
+Found match in running_list: s1 (PID: 13)
 Found match in running_list: s1 (PID: 14)
->>>>>> Total processes terminated: 1 <<<<<<<
-	CPU 0: Dispatched process 14
+>>>>>> Total processes terminated: 2 <<<<<<<
+	CPU 1: Terminated process 13
+	CPU 1: Dispatched process 14
 Time slot  21
-	CPU 1: Put process 15 to run queue
-	CPU 1: Dispatched process 15
+	CPU 1: Terminated process 14
+	CPU 1 stopped
+	CPU 0: Put process 15 to run queue
+	CPU 0: Dispatched process 15
 ===== PHYSICAL MEMORY AFTER DEALLOCATION =====
 PID=15 - Region=1
 print_pgtbl: 0 - 256
@@ -224,13 +227,11 @@ print_list_rg:
 rg[0->100]
 
 ================================================================
-	CPU 0: Terminated process 14
-	CPU 0 stopped
 Time slot  22
 	CPU 2: Put process 16 to run queue
 	CPU 2: Dispatched process 16
-	CPU 1: Processed 15 has finished
-	CPU 1 stopped
+	CPU 0: Processed 15 has finished
+	CPU 0 stopped
 Time slot  23
 Time slot  24
 Time slot  25

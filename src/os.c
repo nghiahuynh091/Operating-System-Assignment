@@ -110,7 +110,7 @@ static void *cpu_routine(void *args) {
 		{
             // Process đã bị đánh dấu để kết thúc
             pthread_mutex_lock(&mmvm_lock);
-            printf("\tCPU %d: Terminated process %2d\n", id, proc->pid);
+            printf("\tCPU %d: Process %d received TERMINATED signal \n", id, proc->pid);
             pthread_mutex_unlock(&mmvm_lock);
 			
 			put_process_out_of_runninglist(proc);

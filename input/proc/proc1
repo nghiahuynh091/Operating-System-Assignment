@@ -1,0 +1,13 @@
+1 12
+alloc 200 0
+free 0
+alloc 300 1
+write 112 1 0
+write 114 1 1
+write 111 1 2
+write 99 1 3
+write 50 1 4
+write -1 1 5
+syscall 101 1
+free 1
+alloc 800 2
